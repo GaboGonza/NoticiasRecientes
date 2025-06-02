@@ -2,8 +2,8 @@ name: Ejecutar bot de noticias diario
 
 on:
   schedule:
-    - cron: '35 17 * * *' # Todos los días a las 8:00 AM UTC
-  workflow_dispatch:     # Permite ejecutar el workflow manualmente desde GitHub
+    - cron: '0 18 * * *'  # Todos los días a la 1:00 PM hora CDMX (UTC-6 o UTC-5 según horario)
+  workflow_dispatch:       # Permite ejecutar el workflow manualmente desde GitHub
 
 jobs:
   run-bot:
@@ -30,4 +30,3 @@ jobs:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_IDS: ${{ secrets.TELEGRAM_CHAT_IDS }}
         run: python NewsBot.py
-  
