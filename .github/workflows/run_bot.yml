@@ -1,28 +1,32 @@
-name: Ejecutar bot de noticias
+name: Ejecutar bot de noticias diario
 
 on:
   schedule:
-    - cron: '13 8 * * *'  # Ejecutar a las 8:13 AM UTC-6 (CDMX)
-  workflow_dispatch:       # Permite ejecutar manualmente también
+    - cron: '0 8 * * *'  # Todos los días a las 8:00 AM UTC
+  workflow_dispatch:     # Permite ejecutar el workflow manualmente desde GitHub
 
 jobs:
-  run:
+  run-bot:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Clonar repo
+        uses: actions/checkout@v3
 
-      - name: Configurar Python
-        uses: actions/setup-python@v5
+      - name: Configurar Python 3.11
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: '3.11'
 
       - name: Instalar dependencias
-        run: pip install -r requirements.txt
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-      - name: Ejecutar bot
-        run: python main.py
+      - name: Ejecutar script
         env:
           GMAIL_USUARIO: ${{ secrets.GMAIL_USUARIO }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_IDS: ${{ secrets.TELEGRAM_CHAT_IDS }}
+        run: python NewsBot.py
