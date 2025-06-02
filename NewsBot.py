@@ -27,7 +27,7 @@ PALABRAS_CLAVE = [
 ]
 
 PALABRAS_EXCLUIDAS = [
-    "deporte", "cultural", "entrevista", "opinión", "gastronómico", "espectáculo"
+    "deporte", "cultural", "entrevista", "opinión", "gastronómico", "espectáculo", 
 ]
 
 CLAVES_VW = [
@@ -44,11 +44,21 @@ FUENTES_RSS = [
     ("AutoCosmos", "https://noticias.autocosmos.com.mx/rss"),
     ("Cluster Automotriz NL", "https://www.clusterautomotriz.com.mx/noticias?format=feed&type=rss"),
     ("Vanguardia MX", "https://vanguardia.com.mx/rss/"),
-    ("Milenio Laguna", "https://www.milenio.com/rss/feed.xml?section=laguna")
+    ("Milenio Laguna", "https://www.milenio.com/rss/feed.xml?section=laguna"),
+    ("Infobae", "https://www.infobae.com/america/rss.xml"),
+    ("La Jornada", "https://www.jornada.com.mx/rss.xml"),
+    ("El Sol de México", "https://www.elsoldemexico.com.mx/rss.xml"),
+    ("El Horizonte", "https://www.elhorizonte.mx/rss/portada.xml"), # Ya está, pero asegúrate
+    ("Infobae", "https://www.infobae.com/america/rss.xml"),
+    ("La Jornada", "https://www.jornada.com.mx/rss.xml")
 ]
 
 URLS_DIRECTAS = [
-    "https://www.reforma.com/reportan-perdida-total-en-planta-de-daimay-tras-incendio/ar3003242"
+    "https://www.reforma.com/reportan-perdida-total-en-planta-de-daimay-tras-incendio/ar3003242",
+    "https://www.infobae.com/sociedad/2025/05/31/incendio-en-la-panalera-liberty-justicia-sabotaje/",
+    "https://www.jornada.com.mx/notas/2025/05/20/estados/incendio-en-fabrica-de-diesel-en-cadereyta/",
+    "https://www.elsiglodetorreon.com.mx/noticia/2025/fuerte-incendio-planta-daimay.html",
+    "https://www.elhorizonte.mx/local/se-registra-incendio-en-planta-whirlpool-en-apodaca/123456"
 ]
 
 def contiene_palabra(lista, texto):
