@@ -11,10 +11,10 @@ import os
 # Configuración
 GMAIL_USUARIO = os.getenv("GMAIL_USUARIO")
 GMAIL_APP_PASSWORD = os.getenv("GMAIL_APP_PASSWORD")
-DESTINATARIOS = ["ggonza1999@gmail.com"]
+DESTINATARIOS = [GMAIL_USUARIO]
 
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
-TELEGRAM_CHAT_IDS = ["5733489658"]
+TELEGRAM_CHAT_IDS = os.getenv("TELEGRAM_CHAT_IDS", "").split(",")
 
 # Palabras clave
 PALABRAS_CLAVE = [
