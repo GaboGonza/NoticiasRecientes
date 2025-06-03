@@ -2,7 +2,7 @@ name: Ejecutar bot de noticias diario
 
 on:
   schedule:
-    - cron: '* 7,19 * * *'  # Todos los días a la 1:00 PM hora CDMX (UTC-6 o UTC-5 según horario)
+    - cron: '0 8,20 * * *'  # Todos los días a la 1:00 PM hora CDMX (UTC-6 o UTC-5 según horario)
   workflow_dispatch: # Permite ejecutar el workflow manualmente desde GitHub
 jobs:
   run-bot:
