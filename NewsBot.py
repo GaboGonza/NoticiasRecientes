@@ -22,12 +22,12 @@ PALABRAS_CLAVE = [
     "accidente", "choque", "volcadura", "colisión", "paralización",
     "paro", "desalojo", "emergencia", "alerta", "muertos", "heridos",
     "planta", "fábrica", "empresa", "siniestro", "riesgo", "crisis",
-    "Volkswagen", "VW", "Daimay", "Ramos Arizpe", "proveedor", "automotriz",
-    "Audi", "armadora", "ensambladora"
+    "industria", "industrial", "VW"
 ]
 
 PALABRAS_EXCLUIDAS = [
-    "deporte", "cultural", "entrevista", "opinión", "gastronómico", "espectáculo", 
+    "deporte", "cultural", "entrevista", "opinión", "gastronómico", "espectáculo",
+    "moda", "concierto", "celebridad", "artista", "evento musical"
 ]
 
 CLAVES_VW = [
@@ -39,7 +39,6 @@ FUENTES_RSS = [
     ("El Siglo de Torreón", "https://www.elsiglodetorreon.com.mx/rss"),
     ("Reforma", "https://www.reforma.com/rss/portada.xml"),
     ("El Horizonte", "https://www.elhorizonte.mx/rss/portada.xml"),
-    ("Google News", "https://news.google.com/rss/search?q=incendio+OR+accidente+OR+Volkswagen+OR+Audi+OR+planta+automotriz&hl=es-419&gl=MX&ceid=MX:es-419"),
     ("El Financiero", "https://www.elfinanciero.com.mx/rss/ultimas-noticias/"),
     ("AutoCosmos", "https://noticias.autocosmos.com.mx/rss"),
     ("Cluster Automotriz NL", "https://www.clusterautomotriz.com.mx/noticias?format=feed&type=rss"),
@@ -48,9 +47,17 @@ FUENTES_RSS = [
     ("Infobae", "https://www.infobae.com/america/rss.xml"),
     ("La Jornada", "https://www.jornada.com.mx/rss.xml"),
     ("El Sol de México", "https://www.elsoldemexico.com.mx/rss.xml"),
-    ("El Horizonte", "https://www.elhorizonte.mx/rss/portada.xml"), # Ya está, pero asegúrate
-    ("Infobae", "https://www.infobae.com/america/rss.xml"),
-    ("La Jornada", "https://www.jornada.com.mx/rss.xml")
+    ("El Sol de Puebla", "https://www.elsoldepuebla.com.mx/rss.xml"),
+    ("AM León", "https://www.am.com.mx/rss"),
+    ("Noticias de Querétaro", "https://www.diariodequeretaro.com.mx/rss.xml"),
+    ("Heraldo de Aguascalientes", "https://www.heraldo.mx/feed/"),
+    ("El Occidental", "https://www.eloccidental.com.mx/rss.xml"),
+    ("El Universal Edomex", "https://www.eluniversaledomex.mx/rss"),
+    ("Mural", "https://www.mural.com/rss/portada.xml"),
+    ("Google News industria", "https://news.google.com/rss/search?q=incendio+planta+OR+explosi%C3%B3n+f%C3%A1brica+OR+sinestro+industrial&hl=es-419&gl=MX&ceid=MX:es-419"),
+    ("Google News Guanajuato", "https://news.google.com/rss/search?q=incendio+planta+Guanajuato&hl=es-419&gl=MX&ceid=MX:es-419"),
+    ("Google News Puebla", "https://news.google.com/rss/search?q=incendio+planta+Puebla&hl=es-419&gl=MX&ceid=MX:es-419"),
+    ("Google News Queretaro", "https://news.google.com/rss/search?q=incendio+planta+Quer%C3%A9taro&hl=es-419&gl=MX&ceid=MX:es-419")
 ]
 
 URLS_DIRECTAS = [
